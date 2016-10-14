@@ -71,7 +71,7 @@ describe('Pattern 1', function () {
     var cap = new Captcha(a,2,5,5);
     expect(cap.generate()).toEqual('5 - Five');
   });
-  it('should return "6 - Six" when input is 1,2,5,5', function () {
+  it('should return "6 - Six" when input is 1,2,6,6', function () {
     var cap = new Captcha(a,2,6,6);
     expect(cap.generate()).toEqual('6 - Six');
   });
@@ -83,25 +83,25 @@ describe('Pattern 1', function () {
     var cap = new Captcha(a,1,8,8);
     expect(cap.generate()).toEqual('8 + Eight');
   });
-  it('should return "8 + Eight" when input is 1,1,8,8', function () {
-    var cap = new Captcha(a,1,8,8);
-    expect(cap.generate()).toEqual('8 + Eight');
+  it('should return "9 - Nine" when input is 1,2,9,9', function () {
+    var cap = new Captcha(a,2,9,9);
+    expect(cap.generate()).toEqual('9 - Nine');
   });
 
 
   describe('Pattern 2', function () {
   let a = 2;
-  it('Generate Zero + 0', function () {
-    var cap = new Captcha(a,1,0,0);
-    expect(cap.generate()).toEqual('Zero + 0');
+  it('should return "One + 2" when input is 1,1,1,2', function () {
+    var cap = new Captcha(a,1,1,2);
+    expect(cap.generate()).toEqual('One + 2');
   });
-  it('Generate Five + 5', function () {
-    var cap = new Captcha(a,1,5,5);
-    expect(cap.generate()).toEqual('Five + 5');
+  it('should return "One + 2" when input is 1,1,1,2', function () {
+    var cap = new Captcha(a,1,1,2);
+    expect(cap.generate()).toEqual('One + 2');
   });
-  it('Generate Nine / 0', function () {
-    var cap = new Captcha(a,4,9,0);
-    expect(cap.generate()).toEqual('Nine / 0');
+  it('should return "One + 2" when input is 1,1,1,2', function () {
+    var cap = new Captcha(a,1,1,2);
+    expect(cap.generate()).toEqual('One + 2');
   });
 });
 
