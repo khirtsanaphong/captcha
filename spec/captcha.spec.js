@@ -71,5 +71,38 @@ describe('Pattern 1', function () {
     var cap = new Captcha(a,2,5,5);
     expect(cap.generate()).toEqual('5 - Five');
   });
+  it('should return "6 - Six" when input is 1,2,5,5', function () {
+    var cap = new Captcha(a,2,6,6);
+    expect(cap.generate()).toEqual('6 - Six');
+  });
+  it('should return "7 / Seven" when input is 1,4,7,7', function () {
+    var cap = new Captcha(a,4,7,7);
+    expect(cap.generate()).toEqual('7 / Seven');
+  });
+  it('should return "8 + Eight" when input is 1,1,8,8', function () {
+    var cap = new Captcha(a,1,8,8);
+    expect(cap.generate()).toEqual('8 + Eight');
+  });
+  it('should return "8 + Eight" when input is 1,1,8,8', function () {
+    var cap = new Captcha(a,1,8,8);
+    expect(cap.generate()).toEqual('8 + Eight');
+  });
+
+
+  describe('Pattern 2', function () {
+  let a = 2;
+  it('Generate Zero + 0', function () {
+    var cap = new Captcha(a,1,0,0);
+    expect(cap.generate()).toEqual('Zero + 0');
+  });
+  it('Generate Five + 5', function () {
+    var cap = new Captcha(a,1,5,5);
+    expect(cap.generate()).toEqual('Five + 5');
+  });
+  it('Generate Nine / 0', function () {
+    var cap = new Captcha(a,4,9,0);
+    expect(cap.generate()).toEqual('Nine / 0');
+  });
+});
 
 });
